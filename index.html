@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Simple Polygon</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/miestilo.css">
+    
+  </head>
+  <body>
+
+
+
+   <nav class=" green darken-3">
+    <div class="nav-wrapper">
+      <a href="/Hackathons" class=" header_logo"><span class="ice">ice </span>| santa cruz</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down ">
+        <li class="active"><a href="#"><i class="material-icons left">map</i>Mapa</a></li>
+        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Negocios<i class="material-icons right">arrow_drop_down</i></a></li>
+      </ul>
+
+      <ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">Tienda de Barrios</a></li>
+    <li><a href="#!">Supermercados</a></li>
+    <li class="divider"></li>
+    <li><a href="#!">Mercados</a></li>
+    </ul>
+
+    </div>
+  </nav>
+
+  <div id="map"></div>  
+    
+ <div class="fixed-action-btn horizontal click-to-toggle  " style="bottom: 45px; right: 24px;">
+  <a class="btn-floating btn-large green darken-3  ">
+    <i class="material-icons  ">menu</i>
+  </a>
+  <ul>
+    <li><a id="btn_info_360" class="btn-floating green darken-3 tooltipped top" data-position="top" data-delay="50" data-tooltip="Vista Satelital"><i class="material-icons">near_me</i></a></li>
+    <li><a id="btn_info_basica" class="btn-floating green darken-3 tooltipped top" data-position="top" data-delay="50" data-tooltip="Recursos Basicos"><i class="material-icons">assignment</i></a></li>
+    <li><a id="btn_streep_view" class="btn-floating green darken-3 tooltipped top" data-position="top" data-delay="50" data-tooltip="Vista de 360°"><i class="material-icons">visibility</i></a></li>
+    <li><a id="btn_tiendas" class="btn-floating green darken-3 tooltipped" data-position="top" data-delay="50" data-tooltip="Tienda de Barrios"><i class="material-icons">store</i></a></li>
+    <li><a id="btn_distrito" class="btn-floating green darken-3 tooltipped top" data-position="top" data-delay="50" data-tooltip="Distritos"><i class="material-icons ">pin_drop</i></a></li>
+  </ul>
+</div>
+
+ 
+        
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content center">
+      <h4>Servicios Basicos</h4>
+      
+         <div class="row ">
+         
+
+      <table  class="responsive-table ">
+        <thead>
+          <tr>
+              <th data-field="id">Agua</th>
+              <th data-field="name">Alcantarillado</th>
+              <th data-field="price">Gas</th>
+                <th data-field="price">Luz</th>
+          </tr>
+        </thead>
+        <tr>
+            <td id="idAgua"></td>
+            <td id="idAlcantarillado"></td>
+            <td id="idGas"></td>
+            <td id="idLuz"></td>
+        </tr>
+
+      </table>
+      </div>
+
+      
+    </div>
+    <div class="modal-footer">
+      <a href="#" class=" modal-action modal-close waves-effect waves-green btn-flat">Salir</a>
+    </div>
+  </div>
+
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/app.js"></script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0zTdsNaoQiU6dphlB0DPJ-r35KqoUMCw&signed_in=false&callback=initMap"></script>
+    <script src="js/materialize.min.js"></script>
+    <script>
+    $( document ).ready(function(){
+       $(".button-collapse").sideNav();
+       $('.tooltipped').tooltip({delay: 50});
+    });
+    
+    </script>
+
+  </body>
+
+  
+</html>
